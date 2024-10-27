@@ -12,7 +12,7 @@ struct OnboardingBodyWeight: View {
     @State private var inputText: String = ""
     @State var waterIntake: CGFloat = 0.0
     @State private var showAlert: Bool = false
-    let defaults = UserDefaults.standard // 1
+    let defaults = UserDefaults.standard  // 1
 
     var body: some View {
         NavigationStack {
@@ -59,9 +59,10 @@ struct OnboardingBodyWeight: View {
 
                 // --------------------------------------------------------------
 
-                NavigationLink(destination:
-                                //IntankProgress()
-                                OnboardingNotification()
+                NavigationLink(
+                    destination:
+                        //IntankProgress()
+                        OnboardingNotification()
                 ) {
                     Text("Calculate Now")
                         .padding()
@@ -73,14 +74,14 @@ struct OnboardingBodyWeight: View {
                     TapGesture().onEnded {
 
                         if let value = Double(inputText) {
-                            showAlert = false  // No alert needed
+                            showAlert = false
                             waterIntake = CGFloat(value * 0.03)
-                            
-                            defaults.set(waterIntake, forKey: "waterIntake") //2. set
+
+                            defaults.set(waterIntake, forKey: "waterIntake")  //2. set
                             print("Water Intake set to: \(waterIntake)")
 
                         } else {
-                            showAlert = true  // Show alert for invalid input
+                            showAlert = true 
                         }
                     }
                 ).alert(isPresented: $showAlert) {

@@ -34,28 +34,19 @@ struct IntankProgress: View {
 
                 ZStack {
                     Circle()
-                        .stroke(
-                            style: StrokeStyle(lineWidth: 33, lineCap: .round)
-                        )
+                        .stroke(style: StrokeStyle(lineWidth: 33, lineCap: .round))
                         .fill(.greyLight)
 
                     Circle()
-                        .trim(
-                            from: 0,
-                            to: goal > 0 ? min(progress / goal, 1.0) : 0
-                        )
-                        .stroke(
-                            style: StrokeStyle(lineWidth: 33, lineCap: .round)
-                        )
+                        .trim(from: 0, to: goal > 0 ? min(progress / goal, 1.0) : 0)
+                        .stroke( style: StrokeStyle(lineWidth: 33, lineCap: .round))
                         .fill(.cyanDark)
                         .rotationEffect(.degrees(-90))
 
                     Image(
                         systemName: symbolNames[
                             min(
-                                Int(
-                                    (progress / max(goal, 1.0))
-                                        * CGFloat(symbolNames.count)),
+                                Int((progress / max(goal, 1.0)) * CGFloat(symbolNames.count)),
                                 symbolNames.count - 1
                             )
                         ]
@@ -74,16 +65,10 @@ struct IntankProgress: View {
                         .font(.title2)
                         .fontWeight(.semibold)
 
-                    Stepper(
-                        "Add Water", value: $progress, in: 0...max(goal, 1.0),
-                        step: 0.1
-                    )
+                    Stepper("Add Water", value: $progress, in: 0...max(goal, 1.0), step: 0.1)
                     .labelsHidden()
                     .onChange(of: progress) {
-
-                        print(
-                            "t: \(CGFloat(round(10 * progress) / 10)), Goal: \(goal)"
-                        )
+                        print("t: \(CGFloat(round(10 * progress) / 10)), Goal: \(goal)")
                     }
                 }.frame(maxWidth: .infinity, alignment: .center)
                 Spacer()
