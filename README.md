@@ -1,12 +1,16 @@
-# Hydrate App 💧
 
-## Overview
+![cover](https://github.com/user-attachments/assets/3d83ccbc-12c1-4518-bb56-34fb0ce36416)
+
+
+# iHydrate App 💧
+
+## Overview 🔎
 
 Welcome to the Hydrate App! This simple tool is here to help you track your daily water intake and stay motivated. Built with Xcode and SwiftUI, it offers a friendly interface for logging your hydration and setting reminders. 
 
 ## Features 🌟
 
-- **User Weight Input**: Start by entering your weight on the first page. This helps us suggest how much water you should be drinking each day.
+- **User Weight Input**: Start by entering your weight on the first page. This helps us calculate how much water you should be drinking each day.
 - **Notification Preferences**: Set your reminders! Choose how and when you'd like to be nudged to drink more water throughout the day.
 - **Progress Circle**: Stay motivated with a fun progress circle that fills up as you log your intake. 🎯
 - **Stepper Control**: Easily record how much water you drink using a stepper. It's quick and intuitive!
@@ -48,7 +52,6 @@ Welcome to the Hydrate App! This simple tool is here to help you track your dail
 
 - Xcode
 - SwiftUI
-- Combine (for notifications)
 
 ## Contributing 🤝
 
@@ -64,4 +67,4 @@ If you have any questions or feedback, please reach out at [your.email@example.c
 
 ---
 
-Thanks for checking out the Hydrate App! Remember, every drop counts! 💦
+Thanks for checking out the iHydrate App! Remember, every drop counts! 💦
