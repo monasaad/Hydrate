@@ -44,9 +44,7 @@ Welcome to the Hydrate App! This simple tool is here to help you track your dail
 
 ## Screenshots
 
-![Weight Input Screen][]  
-![Notification Preferences][]  
-![Progress Circle][]  
+![screenshots](https://github.com/user-attachments/assets/3d6365d6-df84-43cd-9c1b-7bf26fd383a6)
 
 ## Technologies Used 🛠️
 
